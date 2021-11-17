@@ -1,0 +1,22 @@
+.header_navigration{
+    background: #ffb300;
+}
+
+/*Website navigration style*/
+.me-auto a{
+    color: #842029;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    background: #f1c02f;
+    margin: 0 10px;
+}
+/*Website navigration active button style*/
+.me-auto .active{
+    color: azure;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    background: #bd4a55;
+    margin: 0 10px;
+}
