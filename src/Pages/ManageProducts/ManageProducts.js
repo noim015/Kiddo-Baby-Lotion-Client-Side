@@ -6,7 +6,7 @@ const ManageProducts = () => {
     const [orders, setOrders] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/users`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data);
@@ -19,7 +19,7 @@ const ManageProducts = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setUsers(data));
     }, []);
@@ -28,7 +28,7 @@ const ManageProducts = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/users/${id}`;
+            const url = `http://localhost:5000/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -38,6 +38,7 @@ const ManageProducts = () => {
                         alert('deleted successfully');
                         const remainingUsers = users.filter(user => user._id !== id);
                         setUsers(remainingUsers);
+                        window.location.reload();
                     }
                 });
         }

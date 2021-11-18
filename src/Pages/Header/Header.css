@@ -1,15 +1,18 @@
 .header_navigration{
-    background: #ffb300;
+    background: #1cb2d8;
 }
 
 /*Website navigration style*/
 .me-auto a{
-    color: #842029;
+    color: #036377;
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
-    background: #f1c02f;
+    background: #33c1e5;
     margin: 0 10px;
+    font-weight: 600;
+    text-shadow: 0 1px 1px #1cb2d8;
+    text-align: center;
 }
 /*Website navigration active button style*/
 .me-auto .active{
@@ -17,6 +20,6 @@
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
-    background: #bd4a55;
+    background: #038ca7;
     margin: 0 10px;
 }

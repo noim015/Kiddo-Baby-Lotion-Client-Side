@@ -47,7 +47,7 @@ const Orders = ({ course }) => {
                         <h4>Price: {productPrice}$</h4>
                       </Card.Body>
                       <Card.Body className="d-flex">
-                      <button onClick={() => handleDeleteUser(_id)}>Delete Order</button>
+                      <button className="btn btn-danger" onClick={() => handleDeleteUser(_id)}>Delete Order</button>
                       </Card.Body>
                     </Card>
                   </div>

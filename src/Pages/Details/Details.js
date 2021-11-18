@@ -15,9 +15,6 @@ const Details = () => {
   
   const matchingProduct = displayProducts.find((product) => product._id === key);
   
-
-  
-  // console.log(productTitle)
     const nameRef = useRef();
     const mobileRef = useRef();
     const addressRef = useRef();
@@ -59,19 +56,11 @@ const Details = () => {
         e.preventDefault();
     }
 
-
-
-    
-    
     
     return (
         <div className="container">
           <Row>
              <h1>Place Order</h1>
-          </Row>
-          <Row>
-          
-              
           </Row>
             <Form onSubmit={handlePlaceOrder}>
                 
@@ -83,7 +72,7 @@ const Details = () => {
 
                   <Form.Group as={Col} controlId="formGridMobile">
                     <Form.Label>Mobile</Form.Label>
-                    <Form.Control type="number" ref={mobileRef} placeholder="Mobile" />
+                    <Form.Control type="mobile" ref={mobileRef} placeholder="Mobile" />
                   </Form.Group>
                 </Row>
 
@@ -91,8 +80,6 @@ const Details = () => {
                   <Form.Label>Address</Form.Label>
                   <Form.Control placeholder="1234 Main St" ref={addressRef} />
                 </Form.Group>
-
-                
 
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridCity">
@@ -110,8 +97,6 @@ const Details = () => {
                     <Form.Control ref={zipRef} placeholder="2200/1100" />
                   </Form.Group>
                 </Row>
-
-                
 
                 <Button variant="danger" type="submit">
                   Place Order

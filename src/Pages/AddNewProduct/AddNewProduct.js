@@ -23,7 +23,7 @@ const AddNewProduct = () => {
 
         const newUser = { title, desc, price, img, age };
 
-        fetch('http://localhost:5000/users', {
+        fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +33,7 @@ const AddNewProduct = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Successfully added the user.')
+                    alert('Successfully added a new product.')
                     e.target.reset();
                 }
             })
@@ -72,9 +72,6 @@ const AddNewProduct = () => {
                     <Form.Control type="text" ref={imgRef} placeholder="Enter Product image url" />
                   </Form.Group>
                 </Row>
-
-               
-
                 <Button variant="danger" type="submit">
                   Add Now
                 </Button>

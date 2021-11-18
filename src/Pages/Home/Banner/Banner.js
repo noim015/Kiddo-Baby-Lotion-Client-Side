@@ -15,8 +15,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1>TRAIN WITH THE BEST PERSONAL TRAINER</h1>
-                        <p>USE OUR EXPERIENCE TO ACHIEVE THE MIND AND BODY YOU DESERVE.</p>
+                        <h1>Gentle for Babies, and the Planet</h1>
+                        <p>we're always pushing ourselves to improve - our products</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item style={{maxHeight:'700px'}}>
@@ -26,8 +26,9 @@ const Banner = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h1>TRAIN WITH THE BEST PERSONAL NUTRITIONIST</h1>
-                        <p>USE OUR EXPERIENCE TO ACHIEVE THE PHYSIQUE YOU DESERVE.</p>
+                        <h1>Get personalized tips & tricks for you and your little one</h1>
+                        <p>Get personalized tips & tricks for you and your little one
+delivered to your inbox</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item style={{maxHeight:'700px'}}>
@@ -37,8 +38,8 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h1>TRAIN WITH THE BEST PERSONAL MOTIVATOR</h1>
-                        <p>USE OUR EXPERIENCE TO ACHIEVE THE MUSCLE YOU DESERVE.</p>
+                        <h1>Baby skin is super sensitive</h1>
+                        <p>Baby skin is super sensitive, and it takes gentle products to do the job right.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
