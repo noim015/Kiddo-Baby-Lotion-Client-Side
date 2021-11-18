@@ -18,6 +18,8 @@ import AddNewProduct from './Pages/AddNewProduct/AddNewProduct';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import PayNow from './Pages/PayNow/PayNow';
 import Reviews from './Pages/Reviews/Reviews';
+import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -57,6 +59,12 @@ function App() {
        </PrivateRoute>
        <PrivateRoute path="/reviews">
          <Reviews></Reviews>
+       </PrivateRoute>
+       <PrivateRoute path="/makeadmin">
+         <MakeAdmin></MakeAdmin>
+       </PrivateRoute>
+       <PrivateRoute path="/manageproducts">
+         <ManageProducts></ManageProducts>
        </PrivateRoute>
        <PrivateRoute path="/Products/:key">
          <Details></Details>

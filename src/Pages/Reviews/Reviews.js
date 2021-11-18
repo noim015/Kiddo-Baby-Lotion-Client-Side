@@ -3,17 +3,11 @@ import { Col, Form, Row , Button, Container} from 'react-bootstrap';
 
 const Reviews = () => {
 
-
     const titleRef = useRef();
     const descRef = useRef();
     const rateRef = useRef();
-    
-    
-    
-
     const handleReview = e => {
 
-      
         const title = titleRef.current.value;
         const description = descRef.current.value;
         const rating = rateRef.current.value;

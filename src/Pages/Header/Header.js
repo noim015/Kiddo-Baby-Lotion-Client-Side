@@ -23,8 +23,8 @@ const Header = () => {
                                     {user?.email && user?.email!=='admin@admin.com'  &&<NavLink activeClassName="active" to="/dashboard">Dashboard</NavLink>}
                                     {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/manageallorders">Manage All Orders</NavLink>}
                                     {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/addnewproduct">Add A New Product</NavLink>}
-                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/addnewproduct">Make Admin</NavLink>}
-                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/addnewproduct">Manage Products</NavLink>}
+                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/makeadmin">Make Admin</NavLink>}
+                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/manageproducts">Manage Products</NavLink>}
                                 </Nav>
                                 {user?.email && <Nav className="justify-content-end" >
                                     <span style={{color:'#fff',padding:'10px'}}>{user.displayName}</span>
