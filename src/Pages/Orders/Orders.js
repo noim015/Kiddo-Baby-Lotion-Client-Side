@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Orders = ({ course }) => {
     const {productTitle, productPrice, productImg,_id} = course;
     const [users, setUsers] = useState([]);
+    const location = useLocation();
     useEffect(() => {
         fetch('http://localhost:5000/orders')
             .then(res => res.json())
@@ -24,31 +25,34 @@ const Orders = ({ course }) => {
                         alert('deleted successfully');
                         const remainingUsers = users.filter(user => user._id !== id);
                         setUsers(remainingUsers);
+                        window.location.reload();
                     }
                 });
         }
     }
+
+   
     return (
         
             <Col>
      
-     <div className="m-2">
-       <Card className="mx-auto" style={{ width: "21rem" }}>
-         <Card.Img variant="top" style={{maxHeight:'150px'}} className="img-fluid" src={productImg} />
-         <Card.Body className="my-1 py-1">
-           <Card.Title>{productTitle}</Card.Title>
-           
-         </Card.Body>
-         <Card.Body className="my-1 py-1">
-           <h4>Price: {productPrice}$</h4>
-         </Card.Body>
-         <Card.Body className="d-flex">
-         <button onClick={() => handleDeleteUser(_id)}>Delete Order</button>
-         </Card.Body>
-       </Card>
-     </div>
+                  <div className="m-2">
+                    <Card className="mx-auto" style={{ width: "21rem" }}>
+                      <Card.Img variant="top" style={{maxHeight:'150px'}} className="img-fluid" src={productImg} />
+                      <Card.Body className="my-1 py-1">
+                        <Card.Title>{productTitle}</Card.Title>
+                        
+                      </Card.Body>
+                      <Card.Body className="my-1 py-1">
+                        <h4>Price: {productPrice}$</h4>
+                      </Card.Body>
+                      <Card.Body className="d-flex">
+                      <button onClick={() => handleDeleteUser(_id)}>Delete Order</button>
+                      </Card.Body>
+                    </Card>
+                  </div>
    
- </Col>
+            </Col>
        
     );
 };
