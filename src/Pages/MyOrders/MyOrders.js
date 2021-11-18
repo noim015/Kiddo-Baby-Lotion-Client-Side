@@ -34,7 +34,7 @@ const MyOrders = () => {
     
     return (
         <div className="container">
-            <Row className="py-5">
+            <Row >
                  <h1>Ordered Items</h1>
              </Row>
             <Row>

@@ -19,9 +19,12 @@ const Header = () => {
                                     <NavLink activeClassName="active" to="/Products">Our Products</NavLink>
                                     {!user?.email && <NavLink activeClassName="active" to="/register">Register Now</NavLink>}
                                     {!user?.email && <NavLink activeClassName="active" to="/login">Login Now</NavLink>}
-                                    {user?.email && <NavLink activeClassName="active" to="/myorders">My Orders</NavLink>}
-                                    {user?.email && <NavLink activeClassName="active" to="/manageallorders">Manage All Orders</NavLink>}
-                                    {user?.email && <NavLink activeClassName="active" to="/addnewproduct">Add A New Service</NavLink>}
+                                    
+                                    {user?.email && user?.email!=='admin@admin.com'  &&<NavLink activeClassName="active" to="/dashboard">Dashboard</NavLink>}
+                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/manageallorders">Manage All Orders</NavLink>}
+                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/addnewproduct">Add A New Product</NavLink>}
+                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/addnewproduct">Make Admin</NavLink>}
+                                    {user?.email==='admin@admin.com' && <NavLink activeClassName="active" to="/addnewproduct">Manage Products</NavLink>}
                                 </Nav>
                                 {user?.email && <Nav className="justify-content-end" >
                                     <span style={{color:'#fff',padding:'10px'}}>{user.displayName}</span>

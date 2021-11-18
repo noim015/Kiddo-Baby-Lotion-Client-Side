@@ -1,0 +1,13 @@
+.dashboard .col{
+    border: 1px solid red;
+    text-align: center;
+    padding: 5%;
+    background: #92b9e9;
+    margin-top: 40px;
+}
+.dashboard .col a{
+    text-decoration: none;
+    color: #0d6efd;
+    font-size: 25px;
+}
+

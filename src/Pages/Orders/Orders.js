@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const Orders = ({ course }) => {
     const {productTitle, productPrice, productImg,_id} = course;
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/orders')
+            .then(res => res.json())
+            .then(data => setUsers(data));
+    }, []);
+    // DELETE AN USER
+    const handleDeleteUser = id => {
+        const proceed = window.confirm('Are you sure, you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/orders/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remainingUsers = users.filter(user => user._id !== id);
+                        setUsers(remainingUsers);
+                    }
+                });
+        }
+    }
     return (
         
             <Col>
@@ -19,12 +43,7 @@ const Orders = ({ course }) => {
            <h4>Price: {productPrice}$</h4>
          </Card.Body>
          <Card.Body className="d-flex">
-         <NavLink
-                to={`/courses/${_id}`}
-                className="btn btn-danger w-100 me-1"
-              >
-                Delete Order
-              </NavLink>
+         <button onClick={() => handleDeleteUser(_id)}>Delete Order</button>
          </Card.Body>
        </Card>
      </div>
