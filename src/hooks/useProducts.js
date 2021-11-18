@@ -8,11 +8,11 @@ const useProducts = () => {
     const [displayProducts, setDisplayProducts] = useState([]);
     
     useEffect(() => {
-        fetch(`https://scary-ghost-60292.herokuapp.com/products`)
+        fetch(`http://localhost:5000/users`)
             .then(res => res.json())
             .then(data => {
-                setProducts(data.products);
-                setDisplayProducts(data.products);
+                setProducts(data);
+                setDisplayProducts(data);
                 const count = data.count;
                 
             });

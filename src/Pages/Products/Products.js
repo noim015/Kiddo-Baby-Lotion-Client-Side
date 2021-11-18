@@ -6,7 +6,7 @@ import Product from '../Product/Product';
 
 const Products = () => {
     const { displayProducts } = useProducts();
-    console.log(displayProducts);
+    
     return (
         <div>
             <Container>
@@ -15,7 +15,7 @@ const Products = () => {
                 </Row>
                 <Row>
                 {displayProducts?.map((course) => (
-                    <Product course={course} key={course.key}></Product>
+                    <Product course={course} key={course._id}></Product>
                 ))}
                 </Row>
             </Container>
